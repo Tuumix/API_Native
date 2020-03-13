@@ -58,11 +58,12 @@ export default function App() {
       <View style={styles.body}>
         <FlatList
           data={date.dados}
+          keyExtractor={item => item.title}
           renderItem={({item}) => (
             <TouchableOpacity>
               <View style={styles.box}>
-                <Text>{item.id}</Text>
-                <Text style={styles.username}>{item.title}</Text>
+                <Text>nada</Text>
+                <Text style={styles.username}>{item.body}</Text>
               </View>
             </TouchableOpacity>
           )}
